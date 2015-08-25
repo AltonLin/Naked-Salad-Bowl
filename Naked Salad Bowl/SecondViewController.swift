@@ -27,19 +27,44 @@ class SecondViewController: UIViewController{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        if cardNumber > playerNumber {
+            return true
+        }
+        return false
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "toPlay") {
+            var tvc = segue.destinationViewController as ThirdViewController;
+            tvc.playerWords = self.playerWords
+        }
+    }
+
+    @IBAction func playButtonPressed(sender: UIButton) {
+        if shouldPerformSegueWithIdentifier("toPlay", sender: okButton){
+            performSegueWithIdentifier("toPlay", sender: okButton)
+        }
+    }
+    
     @IBAction func okButtonPressed(sender: UIButton) {
-        if cardNumber < playerNumber {
-            if wordOne.text != "" && wordTwo.text != "" && wordThree.text != "" {
+        if cardNumber <= playerNumber {
+            if wordOne.text != "" && wordTwo.text != "" && wordThree.text != ""  && cardNumber != playerNumber {
                 var card:[String] = [wordOne.text, wordTwo.text, wordThree.text]
                 playerWords.append(card)
                 wordOne.text = nil
                 wordTwo.text = nil
                 wordThree.text = nil
-                cardNumber++
-                cardNumberLabel.text = String(cardNumber)
-                if cardNumber == playerNumber {
+                if cardNumber == playerNumber - 1 {
                     okButton.setTitle("Play", forState: UIControlState.Normal)
                 }
+                cardNumberLabel.text = String(cardNumber + 1)
+                cardNumber++
+            } else if wordOne.text != "" && wordTwo.text != "" && wordThree.text != "" {
+                var card:[String] = [wordOne.text, wordTwo.text, wordThree.text]
+                playerWords.append(card)
+                cardNumber++
             }
         }
     }

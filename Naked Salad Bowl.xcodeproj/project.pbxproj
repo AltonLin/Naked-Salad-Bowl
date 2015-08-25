@@ -14,6 +14,7 @@
 		01BEC71A1B84598900973716 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BEC7181B84598900973716 /* LaunchScreen.xib */; };
 		01BEC7261B84598900973716 /* Naked_Salad_BowlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEC7251B84598900973716 /* Naked_Salad_BowlTests.swift */; };
 		01BEC7321B87F64100973716 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEC7311B87F64100973716 /* SecondViewController.swift */; };
+		01C4FD8A1B8C3E7F00C1B92C /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C4FD891B8C3E7F00C1B92C /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		01BEC7241B84598900973716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01BEC7251B84598900973716 /* Naked_Salad_BowlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Naked_Salad_BowlTests.swift; sourceTree = "<group>"; };
 		01BEC7311B87F64100973716 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		01C4FD891B8C3E7F00C1B92C /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				01BEC70F1B84598900973716 /* AppDelegate.swift */,
 				01BEC7111B84598900973716 /* ViewController.swift */,
 				01BEC7311B87F64100973716 /* SecondViewController.swift */,
+				01C4FD891B8C3E7F00C1B92C /* ThirdViewController.swift */,
 				01BEC7131B84598900973716 /* Main.storyboard */,
 				01BEC7161B84598900973716 /* Images.xcassets */,
 				01BEC7181B84598900973716 /* LaunchScreen.xib */,
@@ -217,6 +220,7 @@
 			files = (
 				01BEC7321B87F64100973716 /* SecondViewController.swift in Sources */,
 				01BEC7121B84598900973716 /* ViewController.swift in Sources */,
+				01C4FD8A1B8C3E7F00C1B92C /* ThirdViewController.swift in Sources */,
 				01BEC7101B84598900973716 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +413,7 @@
 				01BEC72B1B84598900973716 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01BEC72C1B84598900973716 /* Build configuration list for PBXNativeTarget "Naked Salad BowlTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				01BEC72E1B84598900973716 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
